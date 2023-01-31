@@ -1,10 +1,6 @@
-/* html {
-    overflow-y: auto;
-} */
 body {
     font-family: roboto, sans-serif;
     margin: 0;
-    overflow-y: auto;
 }
 
 .hero{
@@ -12,21 +8,23 @@ body {
     padding: 16px 24px;
 }
 
+/* Adjust header by removing padding, adding max-width and changing margin & Justify content properties to align with call-to-action section */
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0px 300px ;
-    margin-bottom: 120px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 ul {
     display: flex;
     flex-wrap: wrap;
+    flex-shrink: 1;
     list-style: none;
     padding: 0px;
-    margin-left: auto;
     gap: 16px;
+    margin-left: auto;
 }
 
 a {
@@ -52,13 +50,12 @@ a {
     font-weight: bold;
     flex-shrink: 0;
 }
-
+/* Change the padding, margin and justify content properties */
 .main {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0px 300px;
-    margin-bottom: 120px;
+    margin: 120px 0px;
     /* flex-wrap: wrap; */
 }
 
@@ -83,7 +80,7 @@ img{
     margin: 0px;
 } 
 
-.btn{
+.btn, .white-btn{
     width: 140px;
     height: auto;
     background-color: #3882F6;
@@ -158,4 +155,37 @@ img{
 .ref{
     align-self: flex-end;
     font-weight: 600;
+}
+
+.call-to-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0px;
+}
+
+.action {
+    display: flex;
+    background-color: #3882F6;
+    justify-content: space-around;
+    align-items: center; 
+    min-width: 1200px;
+    height: auto;
+    padding: 32px 32px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.white-btn {
+    border: 2px solid #E5E7EB;
+}
+
+.call div:first-child{
+    font-size: 18px;
+    color: #F9FAF8;
+    font-weight: bold;
+}
+
+.call div:nth-child(2){
+    color:#E5E7EB;
 }
