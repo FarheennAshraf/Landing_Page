@@ -1,6 +1,7 @@
 body {
     font-family: roboto, sans-serif;
     margin: 0;
+
 }
 
 .hero{
@@ -59,7 +60,7 @@ a {
     /* flex-wrap: wrap; */
 }
 
-img{
+.my-image{
     width: 600px;
     height: 234px;
     background-color: gray;
@@ -70,7 +71,7 @@ img{
     flex-direction: column;
     width: 600px;
     height: auto;
-    gap: 8px;
+    gap: 10px;
 
 }
 
@@ -115,21 +116,22 @@ img{
     gap: 80px;
 }
 
-.sub-content, .img {
-    width: 150px;
-    height: auto;
-}
 
-.img {
-    border: 2px solid #3882F6; 
+/*.info-image {
+    width: 200px;
+    height: 200px;
+} */
+
+.info-image {
+    /* border: 2px solid #3882F6;  */
     border-radius: 8px;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
 }
 
 .subtext {
     color: #606163;
-    padding: 8px 0px;
+    padding: 10px 0px;
 }
 
 .quote {
@@ -200,3 +202,80 @@ img{
     padding: 30px 0px;
     font-size: 18px;
 }
+
+
+/* Adding own content*/
+
+/* Update bg-color and text color */
+.hero, .footer{
+    background-color: #1d4053;
+}
+
+.info-head, .cite, .ref {
+    color: #1d4053;
+}
+
+.main-text, .logo{
+    color: #f2f1f7;
+}
+
+/* UPdate color */
+.sec-text, a{
+    color: #d3ced4;
+}
+
+.quote{
+    background-color: #d3ced4;
+}
+
+/* Update bg-color */
+.btn, .white-btn, .action{
+    background-color:#39a3ca;
+}
+
+/*Place img inside div(.my-image). Adjust height. Add shadow */
+.my-image {
+    box-shadow: 10px 10px 5px #25211e;
+    height: 312px;
+}
+
+/* Adjust size of img and adjust stretching of img */
+.my-image img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+/* Resize to fit .info-image & .subtext */
+.sub-content{
+    width: 200px;
+    height:fit-content;
+}
+
+/* resizing */
+.info-image, .info-image img{
+    width: 200px;
+    height: 250px;
+    border-radius: 8px;
+}
+
+/* Adding size according to content to .subtext */
+.subtext{
+    width: inherit;
+    height:106px;
+}
+
+/* Adding more gap between the flex-items of .content. Resize */
+.content{
+    gap: 100px;
+    height: fit-content;
+}
+
+/* Replace margin-bottom with padding-bottom to apply background color to .info */
+.info{
+    margin-bottom: 0px;
+    padding-bottom: 120px;
+}
+
+
+
