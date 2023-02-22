@@ -1,42 +1,110 @@
-body {
-    font-family: roboto, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'roboto', sans-serif;
     margin: 0;
 
 }
 
 .hero{
     background-color: #1F2937;
-    padding: 16px 24px;
+    padding: 0px 120px;
 }
 
-/* Adjust header by removing padding, adding max-width and changing margin & Justify content properties to align with call-to-action section */
-.header {
+.header{
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
-    margin: auto;
+    padding: 0px;
 }
 
-ul {
+nav{
+    flex-basis: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul{
     display: flex;
     flex-wrap: wrap;
-    flex-shrink: 1;
+    flex: 0 1 auto;
     list-style: none;
-    padding: 0px;
-    gap: 16px;
-    margin-left: auto;
+    padding: 20px;
+    gap: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-a {
+a{
     text-decoration: none;
 }
 
+.logo{
+    font-size: 24px;
+    color: #F9FAF8;
+    font-weight: bold;
+    flex-shrink: 0;
+    padding: 16px;
+}
+
+/* Change the padding, margin and justify content properties */
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+
+.main-container{
+    flex-basis: 1200px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* changed class name to .main-content  */
+.main-content{
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    gap: 10px;
+    padding: 20px;
+    max-width: 720px;
+    max-height: 360px; 
+}
+
+
+.main-image{
+    display: flex;
+    flex: 2;
+    max-width: 720px;
+    max-height: 360px;
+    padding: 20px;
+    /* background-color: gray; */
+}
+
+.main-image > img {
+    flex: 1;
+    max-width: inherit;
+    max-height: inherit;
+    object-fit: cover;
+}
+
 .main-text{
+    width: 350px;
     font-size: 48px;
     font-weight: bolder;
     color: #F9FAF8;
-    width: 350px;
+    max-width: 350px;
     margin: 0px;
 }
 
@@ -45,43 +113,15 @@ a {
     color: #E5E7EB;
 }
 
-.logo{
-    font-size: 24px;
-    color: #F9FAF8;
-    font-weight: bold;
-    flex-shrink: 0;
-}
-/* Change the padding, margin and justify content properties */
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 120px 0px;
-    /* flex-wrap: wrap; */
-}
 
-.my-image{
-    width: 600px;
-    height: 234px;
-    background-color: gray;
-}
-
-.sign-up{
-    display: flex;
-    flex-direction: column;
-    width: 600px;
-    height: auto;
-    gap: 10px;
-
-}
-
-.sec-text {
-    width: 450px;
-    height: auto;
+.sec-text{
+    /* width: 450px; */
+    /* height: auto; */
     margin: 0px;
 } 
 
-.btn, .white-btn{
+/* Changed class name for familiarity */
+.main-btn, .act-btn{
     width: 140px;
     height: auto;
     background-color: #3882F6;
@@ -91,159 +131,45 @@ a {
     border-radius: 6px;
     font-weight: bold;
     font-size: 18px;
-    margin-bottom: 8px;
 }
 
+/* Change margin to padding */
+/* Turn into flex-container for fluid layout */
 .info{
     text-align: center;
-    height: fit-content;
-    margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 60px 120px;
 }
 
-.info-head {
+.info-head{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 36px;
     font-weight: bolder;
     color: #1F2937;
-    padding: 60px 0;
 }
 
-.content{
+/* Add flex-wrap to wrap content on smaller screens */
+.info-content{
     display: flex;
-    justify-content: center;
-    gap: 80px;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding: 60px 0px;
+    max-width: 1000px;
+    /* border: 2px solid red; */
 }
 
-
-/*.info-image {
-    width: 200px;
-    height: 200px;
-} */
-
-.info-image {
+/* Adjusting Size */
+.info-image, .info-image img {
     /* border: 2px solid #3882F6;  */
     border-radius: 8px;
     width: 200px;
-    height: 200px;
-}
-
-.subtext {
-    color: #606163;
-    padding: 10px 0px;
-}
-
-.quote {
-    background-color: #E5E7EB;
-    padding: 120px 0px;
-}
-
-.quote-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 840px;
-    margin: auto;
-}
-
-.cite {
-    font-size: 36px;
-    font-weight: lighter;
-    font-style: italic;
-    color: #1F2937;
-}
-.ref{
-    align-self: flex-end;
-    font-weight: 600;
-}
-
-.call-to-action {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 120px 0px;
-}
-
-.action {
-    display: flex;
-    background-color: #3882F6;
-    justify-content: space-around;
-    align-items: center; 
-    min-width: 1200px;
-    height: auto;
-    padding: 32px 32px;
-    border-radius: 8px;
-    box-sizing: border-box;
-}
-
-.white-btn {
-    border: 2px solid #E5E7EB;
-}
-
-.call div:first-child{
-    font-size: 24px;
-    color: #F9FAF8;
-    font-weight: bold;
-}
-
-.call div:nth-child(2){
-    color:#E5E7EB;
-    font-size: 18px;
-}
-
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1F2937;
-    color:#F9FAF8;
-    padding: 30px 0px;
-    font-size: 18px;
-}
-
-
-/* Adding own content*/
-
-/* Update bg-color and text color */
-.hero, .footer{
-    background-color: #1d4053;
-}
-
-.info-head, .cite, .ref {
-    color: #1d4053;
-}
-
-.main-text, .logo{
-    color: #f2f1f7;
-}
-
-/* UPdate color */
-.sec-text, a{
-    color: #d3ced4;
-}
-
-.quote{
-    background-color: #d3ced4;
-}
-
-/* Update bg-color */
-.btn, .white-btn, .action{
-    background-color:#39a3ca;
-}
-
-/*Place img inside div(.my-image). Adjust height. Add shadow */
-.my-image {
-    box-shadow: 10px 10px 5px #25211e;
-    height: 312px;
-}
-
-/* Adjust size of img and adjust stretching of img */
-.my-image img {
-    width: inherit;
-    height: inherit;
-    object-fit: cover;
+    height: 250px;
 }
 
 /* Resize to fit .info-image & .subtext */
@@ -252,11 +178,9 @@ a {
     height:fit-content;
 }
 
-/* resizing */
-.info-image, .info-image img{
-    width: 200px;
-    height: 250px;
-    border-radius: 8px;
+.subtext{
+    color: #606163;
+    padding: 10px 0px;
 }
 
 /* Adding size according to content to .subtext */
@@ -265,17 +189,125 @@ a {
     height:106px;
 }
 
-/* Adding more gap between the flex-items of .content. Resize */
-.content{
-    gap: 100px;
-    height: fit-content;
+/* changing paddings */
+/* Make it a flex-container for flexible view */
+.quote{
+    background-color: #E5E7EB;
+    padding: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Replace margin-bottom with padding-bottom to apply background color to .info */
-.info{
-    margin-bottom: 0px;
-    padding-bottom: 120px;
+.quote-content{
+    flex-basis: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
 }
+
+.cite{
+    font-size: 36px;
+    font-weight: lighter;
+    font-style: italic;
+    color: #1F2937;
+    padding: 4px;
+}
+.ref{
+    align-self: flex-end;
+    font-weight: 600;
+    padding: 4px;
+}
+
+/* Changing paddings for smaller screens view */
+.call-to-action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 120px;
+}
+
+.action{
+    display: flex;
+    flex-basis: 1200px;
+    background-color: #3882F6;
+    justify-content: flex-start;
+    align-items: center; 
+    padding: 32px 64px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.act-btn{
+    border: 2px solid #E5E7EB;
+}
+
+.call{
+    flex-grow: 1;
+}
+
+.call div:first-child{
+    font-size: 24px;
+    color: #F9FAF8;
+    font-weight: bold;
+    padding: 4px 0px;
+}
+
+.call div:nth-child(2){
+    color:#E5E7EB;
+    font-size: 18px;
+    padding: 4px 0px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F2937;
+    color:#F9FAF8;
+    padding: 28px 120px;
+}
+
+.footer > *{
+    font-size: 18px;
+    padding: 8px;
+    font-weight: 500;
+    margin: 0;
+}
+
+
+/* Own content*/
+
+/* Change bg-color and text color */
+.hero, .footer{
+    background-color: #1d4053;
+}
+
+.info-head, .cite, .ref{
+    color: #1d4053;
+}
+
+.main-text, .logo{
+    color: #f2f1f7;
+}
+
+.sec-text, a{
+    color: #d3ced4;
+}
+
+.quote{
+    background-color: #d3ced4;
+}
+
+.act-btn, .main-btn, .action{
+    background-color:#39a3ca;
+}
+
+
 
 
 

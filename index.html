@@ -10,31 +10,38 @@
 <body>
     <div class="hero">
         <div class="header">
-            <div class="logo">Header Logo</div>
-            <ul>
-                <li><a href="#">Book Lists</a></li>
-                <li><a href="#">Book Reviews</a></li>
-                <li><a href="#">Reading Challenges</a></li>
-            </ul>
+            <!-- Added a wrapper container to added flex properties -->
+            <nav>
+                <div class="logo">Header Logo</div>
+                <ul>
+                    <li><a href="#">Book Lists</a></li>
+                    <li><a href="#">Book Reviews</a></li>
+                    <li><a href="#">Reading Challenges</a></li>
+                </ul>
+            </nav>
         </div>
         <div class="main">
-            <div class="sign-up">
-                <h1 class="main-text">My Little List of Reads!</h1>
-                <p class="sec-text">Have you ever wanted to get into reading, but didn't know where to start? <br>
-                    "My Little List of Reads", is all about sharing my journey into the world of books.
-                     I want to share my experiences and discoveries with you as I explore new genres and authors. So, come along and let's discover the wonders of books together!
-                </p>
-                <button class="btn">Sign up</button>
-            </div>
-            <div class="my-image">
-                <img src="./images/pexels-ready-made-3847626.jpg" alt="">
+            <!-- Added a wrapper container -->
+            <div class="main-container">
+                <div class="main-content">
+                    <h1 class="main-text">My Little List of Reads!</h1>
+                    <p class="sec-text">Have you ever wanted to get into reading, but didn't know where to start? <br>
+                        "My Little List of Reads", is all about sharing my journey into the world of books.
+                         I want to share my experiences and discoveries with you as I explore new genres and authors. So, come along and let's discover the wonders of books together!
+                    </p>
+                    <button class="main-btn">Sign up</button>
+                </div>
+
+                <div class="main-image">
+                    <img src="./images/pexels-ready-made-3847626.jpg" alt="">
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="info">
+     <div class="info">
         <div class="info-head">What's on the list next?</div>
-        <div class="content">
+        <div class="info-content">
             <div class="sub-content">
                 <div class="info-image">
                     <img src="https://m.media-amazon.com/images/I/81oCjqak41L.jpg"/>
@@ -63,7 +70,7 @@
         </div>
     </div>
 
-    <div class="quote">
+   <div class="quote">
         <div class="quote-content">
             <div class="cite">"The more that you read, the more things you will know. The more that you learn, the more places you'll go."</div>
             <div class="ref">~Dr. Seuss</div>
@@ -76,11 +83,12 @@
                 <div>Call to action! It's time!</div>
                 <div>Sign up for book recommendation & reading challenge updates!</div>
             </div>
-            <button class="white-btn">Sign up</button>
+            <button class="act-btn">Sign up</button>
         </div> 
     </div>
+
     <div class="footer">
-        Copyright &copy The Odin project 2021
+        <h4>Copyright &copy The Odin project 2021</h4>
     </div>
 </body>
 </html>
